@@ -20,7 +20,7 @@ app.get('/get', async (_, res) => {
         res.status(200).json({ foods: db.data });
     }
     catch(err) {
-        res.status(500).json({ foods: [] });
+        res.status(500).json({ error: err, foods: [] });
     }
 });
 
